@@ -14,7 +14,7 @@ Usage
 
 1. Upload freshrr.php to the root level of your site.
 
-2. Add this script tag to your <head>. Subsitute the file names you wish to track, separated by commas.
+2. Add this script tag to your `<head>`. Subsitute the file names you wish to track, separated by commas.
 
 		<script type="text/javascript" src="/freshrr.php?files=myfile.php,path/to/otherfile.js"></script>
 
@@ -24,25 +24,29 @@ Usage
 Arguments
 ---------
 
-Add additional arguments to the URL query string: ```freshrr.php?files=myfile.php&longpoll=0&ms=500&max=10```
+Add additional arguments to the URL query string: `freshrr.php?files=myfile.php&longpoll=0&ms=500&max=10`
 
-- files:	Comma-separated list of paths to files, relative to freshrr.php.
-- longpoll:	Boolean to indicate a long-lived request. This gives the best performance.
-- ms:		Milliseconds between polls for updates (min 100; defaults to 250 for longpoll, and 1000 for ajax).
-- max:		Stop polling after this many minutes. Prevents server kersplosion when you fall asleep at your desk.
+- **files**:	Comma-separated list of paths to files, relative to freshrr.php.
+- **longpoll**:	Boolean to indicate a long-lived request. This gives the best performance.
+- **ms**:		Milliseconds between polls for updates (min 100; defaults to 250 for longpoll, and 1000 for ajax).
+- **max**:		Stop polling after this many minutes. Prevents server kersplosion when you fall asleep at your desk.
 
-To temporarily disable, add "?refresh=0" to the URL bar, or call "freshrr(false);" from your Javascript.
+To temporarily disable, add "?refresh=0" to the URL bar, or call `freshrr(false);` from your Javascript.
 
 
 Fiercely Asked Questions
 ------------------------
-Q: How do I handle files with unusual characters in the name, such as a comma or ampersand?
+
+**Q: How do I handle files with unusual characters in the name, such as a comma or ampersand?**
+
 A: The doctor says, "don't do that".
 
-Q: Can I check a whole directory at once?
+**Q: Can I check a whole directory at once?**
+
 A: Yes, but only one level down. Recursively checking sub-directories would be very expensive to the server.
 
-Q: How come you pollute the global namespace in Javascript?
+**Q: How come you pollute the global namespace in Javascript?**
+
 A: Cry me a river, hippie.
 
 
